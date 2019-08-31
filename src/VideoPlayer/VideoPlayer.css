@@ -1,0 +1,14 @@
+.control-icon {
+  margin-right: 8px;
+}
+
+.video-controls {
+  border: 1px solid !important;
+  width: 645px;
+  margin-left: 638px;
+}
+
+.video-time-slider {
+  width: 617px;
+  margin-left: 12px;
+}

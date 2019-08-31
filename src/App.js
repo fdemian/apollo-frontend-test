@@ -1,16 +1,18 @@
 import React from 'react';
 import { ApolloProvider } from '@apollo/react-hooks';
+import { createUploadLink } from 'apollo-upload-client';
 import ApolloClient from 'apollo-boost';
-import GreetingFetcher from './GreetingFetcher';
-//import ExchangeRates from './ExchangeRates';
+import VideoUpload from './VideoUpload/VideoUpload';
+//import GreetingFetcher from './GreetingFetcher';
+import client from './configureClient';
 
-const client = new ApolloClient({
-  /*uri: 'https://48p1r2roz4.sse.codesandbox.io'*/
-});
+import './App.css';
 
 const App = () => (
   <ApolloProvider client={client}>
-    <GreetingFetcher />
+    <div className="App">
+      <VideoUpload />
+    </div>
   </ApolloProvider>
 );
 
