@@ -1,12 +1,9 @@
 import React, { useRef, useState } from 'react';
 import Controls from './Controls';
 
-const sizeProps = {width:'640px', height:'360px'};
-const posterImg = "https://imagenes.montevideo.com.uy/imgnoticias/201307/_W880_H495/410992.JPG";
-const webmSrc = "https://www.html5rocks.com/en/tutorials/video/basics/devstories.webm";
-const webmType = 'video/webm;codecs="vp8, vorbis"';
+const sizeProps = { width:'640px', height:'360px'};
 
-const VideoExample = () => {
+const VideoExample = ({src, type}) => {
 
   const videoRef = useRef(null);
 
@@ -91,11 +88,10 @@ const VideoExample = () => {
     <video
       autoPlay={false}
       styles={sizeProps}
-      poster={posterImg}
       ref={videoRef}
       onTimeUpdate={onTimeUpdate}
     >
-      <source src={webmSrc} type={webmType} />
+      <source src={src} type={type} />
       <p>
        Your browser doesn't support HTML5 video.
      </p>
